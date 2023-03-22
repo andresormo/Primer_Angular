@@ -1,0 +1,20 @@
+
+<main class="main">
+  <div class="main">
+    <li
+    class="avengers"
+    *ngFor="let avenger of avengers"
+  >
+    <h2 class="avengers__hero">{{avenger.hero}}</h2>
+    <h4 class="avengers__name">Nombre completo: {{ avenger. name}}</h4>
+    <img class="avengers__img" src="{{avenger.img}}" alt="{{avenger.name}}">
+    <button [ngClass]="{button_red:avenger.isActive, button_blue:!avenger.isActive }"
+    (click)="activeAvengers(avenger)"
+    >Activar</button>
+  </li>
+  </div>
+  <p *ngIf="contador === 0">No hay elementos activados</p>
+  <p *ngIf="contador > 0">Hay {{contador}} elementos activados</p>
+</main>
+
+
